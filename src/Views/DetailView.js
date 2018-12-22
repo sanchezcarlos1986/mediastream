@@ -30,26 +30,28 @@ class MovieDetail extends Component {
     const { movie } = this.state
     return (
       <div>
-        <MovieWrapper backdrop={`${BACKDROP_PATH}${movie.backdrop_path}`}>
-          <Link to="/">
-            <AwesomeIcon icon="arrow-left" />
-            Listado de películas
-          </Link>
-          <MovieInfo>
-            <Overdrive id={movie.title}>
-              <Poster
-                src={`${POSTER_PATH}${movie.poster_path}`}
-                alt={movie.title}
-                title={movie.title}
-              />
-            </Overdrive>
-            <div>
-              <h1>{movie.title}</h1>
-              <h3>{movie.release_date}</h3>
-              <p>{movie.overview}</p>
-            </div>
-          </MovieInfo>
-        </MovieWrapper>
+        {Object.keys(movie).length > 0 && (
+          <MovieWrapper backdrop={`${BACKDROP_PATH}${movie.backdrop_path}`}>
+            <Link to="/">
+              <AwesomeIcon icon="arrow-left" />
+              Listado de películas
+            </Link>
+            <MovieInfo>
+              <Overdrive id={movie.title}>
+                <Poster
+                  src={`${POSTER_PATH}${movie.poster_path}`}
+                  alt={movie.title}
+                  title={movie.title}
+                />
+              </Overdrive>
+              <div>
+                <h1>{movie.title}</h1>
+                <h3>{movie.release_date}</h3>
+                <p>{movie.overview}</p>
+              </div>
+            </MovieInfo>
+          </MovieWrapper>
+        )}
       </div>
     )
   }
