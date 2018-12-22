@@ -5,7 +5,6 @@ import styled from 'styled-components'
 
 // @Dependencies
 import mediastreamLogo from '../Assets/mediastream.svg'
-import AwesomeIcon from './AwesomeIcon'
 
 // @Component
 const Header = () => (
@@ -13,10 +12,6 @@ const Header = () => (
     <Link to="/">
       <img alt="Mediastream" src={mediastreamLogo} />
     </Link>
-    <div>
-      <AwesomeIcon icon="heart" />
-      {0}
-    </div>
   </Wrapper>
 )
 
@@ -34,13 +29,5 @@ const Wrapper = styled.header`
   img {
     height: auto;
     width: 200px;
-  }
-
-  div {
-    color: white;
-    i {
-      margin-right: 10px;
-      color: #f1c40f;
-    }
   }
 `

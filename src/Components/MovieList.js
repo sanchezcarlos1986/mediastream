@@ -12,8 +12,7 @@ import Movie from './Movie'
 // @Component
 class MovieList extends Component {
   /**
-   * Es el primer método que se ejecuta, el cual a su vez, mediante la acción getPeople de Redux, obtiene el
-   * listado de personas desde la API, y los setea en el estado del componente.
+   * Es el primer método que se ejecuta, el cual a su vez, mediante la acción getMovies de Redux, obtiene el listado de películas desde la store.
    */
   componentDidMount() {
     const { getMovies, isLoaded } = this.props

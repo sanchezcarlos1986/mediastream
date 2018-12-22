@@ -1,5 +1,5 @@
 // @External Dependencies
-import React from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Overdrive from 'react-overdrive'
 import styled from 'styled-components'
@@ -7,21 +7,38 @@ import PropTypes from 'prop-types'
 
 // @Dependencies
 import { POSTER_PATH } from '../constants'
+import AwesomeIcon from './AwesomeIcon'
 
 // @Component
-const Movie = ({ movie }) => (
-  <Wrapper>
-    <Link to={`/detail-view/${movie.id}`}>
-      <Overdrive id={movie.id.toString()}>
-        <Poster
-          src={`${POSTER_PATH}${movie.poster_path}`}
-          alt={movie.title}
-          title={movie.title}
+class Movie extends Component {
+  state = {
+    isFav: false
+  }
+
+  render() {
+    const { movie } = this.props
+    const { isFav } = this.state
+
+    return (
+      <Wrapper>
+        <Link to={`/detail-view/${movie.id}`}>
+          <Overdrive id={movie.title}>
+            <Poster
+              src={`${POSTER_PATH}${movie.poster_path}`}
+              alt={movie.title}
+              title={movie.title}
+            />
+          </Overdrive>
+        </Link>
+        <AwesomeIcon
+          icon="heart"
+          className={isFav ? 'isFav' : ''}
+          onClick={() => this.setState({ isFav: !isFav })}
         />
-      </Overdrive>
-    </Link>
-  </Wrapper>
-)
+      </Wrapper>
+    )
+  }
+}
 
 export default Movie
 
@@ -35,6 +52,10 @@ Movie.propTypes = {
 // @Styles
 const Wrapper = styled.div.attrs({ className: 'Wrapper' })`
   text-align: center;
+
+  i.isFav {
+    color: #f39c12;
+  }
 `
 
 export const Poster = styled.img`

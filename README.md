@@ -15,7 +15,7 @@ El siguiente listado nos indica las características generales del proyecto:
 - Fue realizado completamente con **React**.
 - Para el manejo del estado global de la aplicación, se utilizó **Redux**.
 - Para los estilos, se utilizó **Styled Components**.
-- Para las transiciones, se utilizó **react-overdrive**.
+- Para las transiciones, se utilizó **React Overdrive**.
 - Para las peticiones HTTP, se ocupó **Axios**.
 
 En general se utilizaron buenas prácticas de código recomendadas por AirBnb (quienes han contribuido en gran parte a la comunidad) para Javascript y React, las cuales se pueden encontrar en https://github.com/airbnb/javascript y https://github.com/airbnb/javascript/tree/master/react respectivamente.
@@ -39,14 +39,14 @@ Cuando se ejecuta el método _componentWillUnmount_, se llama a la acción _rese
 ---
 
 ### Componentes
-Todos los Componentes son funcionales, excepto _MovieList_, que es una clase ya que el listado de películas se obtiene en el método *ComponentDidMount*.
+Todos los Componentes son funcionales, excepto _Movie_, que tiene estado para el manejo de estado favoritos, y _MovieList_, que es una clase ya que el listado de películas se obtiene en el método *ComponentDidMount*.
 
 A acontinuación se muestra un pequeño detalle de las tareas que realiza cada componente:
 
 Componente | Descripción
 --- | ---
 **AwesomeIcon.js** | Este componente dibuja íconos de la librería Font Awesome.
-**Header.js** | Dibuja el logo de Mediastream y muetra un contador de favoritos.
+**Header.js** | Dibuja el logo de Mediastream.
 **MovieList.js** | Se encarga de llamar a la acción que trae películas desde la API. Cuando las obtiene, las dibuja en el render, utilizando el componente _Movie_.
 **Movie.js** | Recibe como parámetro la película a mostrar, desde donde obtiene toda la información necesaria. Básicamente es cada carátula de la lista de películas.
 

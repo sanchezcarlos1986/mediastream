@@ -28,7 +28,6 @@ class MovieDetail extends Component {
 
   render() {
     const { movie } = this.state
-
     return (
       <div>
         <MovieWrapper backdrop={`${BACKDROP_PATH}${movie.backdrop_path}`}>
@@ -37,7 +36,7 @@ class MovieDetail extends Component {
             Listado de películas
           </Link>
           <MovieInfo>
-            <Overdrive id={movie.id}>
+            <Overdrive id={movie.title}>
               <Poster
                 src={`${POSTER_PATH}${movie.poster_path}`}
                 alt={movie.title}

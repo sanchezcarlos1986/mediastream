@@ -3,7 +3,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 // @Component
-const AwesomeIcon = ({ icon }) => <i className={`fas fa-${icon}`} />
+const AwesomeIcon = ({ icon, className, onClick }) => (
+  <i className={`fas fa-${icon} ${className}`} onClick={onClick} />
+)
 
 // @Proptypes
 AwesomeIcon.propTypes = {
