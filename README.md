@@ -46,7 +46,7 @@ A acontinuación se muestra un pequeño detalle de las tareas que realiza cada c
 Componente | Descripción
 --- | ---
 **AwesomeIcon.js** | Este componente dibuja íconos de la librería Font Awesome.
-**Header.js** | Dibuja el logo de Beetrack y muetra un contador de favoritos.
+**Header.js** | Dibuja el logo de Mediastream y muetra un contador de favoritos.
 **MovieList.js** | Se encarga de llamar a la acción que trae películas desde la API. Cuando las obtiene, las dibuja en el render, utilizando el componente _Movie_.
 **Movie.js** | Recibe como parámetro la película a mostrar, desde donde obtiene toda la información necesaria. Básicamente es cada carátula de la lista de películas.
 
