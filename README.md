@@ -59,8 +59,6 @@ A continuación se listan las *Actions* creadas para ejecutar las diferentes act
 
 Action | Descripción
 --- | ---
-**getMovies** | Se encarga de hacer el GET de películas a la API.
-Una vez que la respuesta del endpoint está OK y devuelve datos, hacemos el _DISPATCH_ hacia la Store, para dejar el listado de películas disponible para toda la app.
+**getMovies** | Se encarga de hacer el GET de películas a la API. Una vez que la respuesta del endpoint está OK y devuelve datos, hacemos el _DISPATCH_ hacia la Store, para dejar el listado de películas disponible para toda la app.
 **getMovie** | Similar a *GET_MOVIES*, con la diferencia de que aquí se obtiene la información de una película en particular. Para poder hacer esto, recibe como parámetro el id de la película solicitada, la que a su vez pasa como parámetro al endpoint.
-**resetMovie** | Se encarga únicamente de hacer un dispatch con un objeto vacío, para limpiar 
- la película almacenada en la store cada vez que la vista de detalle ejecuta el método componentWillUnmount.
+**resetMovie** | Se encarga únicamente de hacer un dispatch con un objeto vacío, para limpiar la película almacenada en la store cada vez que la vista de detalle ejecuta el método componentWillUnmount.
