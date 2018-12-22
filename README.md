@@ -27,7 +27,7 @@ La app cuenta con dos vistas, **Master** y **DetailView**.
 
 A acontinuación se muestra un pequeño detalle de las tareas que realiza cada vista:
 
-Componente | Descripción
+Vista | Descripción
 --- | ---
 **Master.js** | Functional Component. Únicamente se encarga de dibujar al componente _MovieList_.
 **DetailView.js** | Class Componenent. Se encarga de llamar a la acción que devuelve la información de cada película, pasándole como parámetro el id de la misma obtenido desde la url.
