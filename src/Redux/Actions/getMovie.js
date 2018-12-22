@@ -6,9 +6,9 @@ import { API_URL, API_KEY, GET_MOVIE } from '../../constants'
 import { axiosError } from '../../Services'
 
 /**
- * Se encarga de hacer el GET de personas a la API. Debido a que el listado de personas debía ser paginado, este Action Creator recibe como parámetro el número de página que luego se
- * pasará en la url del endpoint, que por defecto es la primera página. Una vez que la respuesta del endpoint está OK y devuelve datos, hacemos el DISPATCH hacia la Store, para dejar
- * el listado de personas paginado disponible para toda la app.
+ * Similar a GET_MOVIES, con la diferencia de que aquí se obtiene la información
+ *  de una película en particular. Para poder hacer esto, recibe como parámetro el id
+ * de la película solicitada, la que a su vez pasa como parámetro al endpoint.
  */
 const getMovie = id => {
   const requestId = 'getMovie'
